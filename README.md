@@ -1,4 +1,4 @@
-# Description-logic-Finite-State-Machine-robot
+# Description Logic & Finite State Machine Robot
 
 # 1)Introduction:
 # 2)Software Architecture: 
