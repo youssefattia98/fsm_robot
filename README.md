@@ -9,3 +9,6 @@
 * System’s Limitations
 * Future Imporvments
 # 6) Authors and contacts
+* Name: Youssef Attia
+* Emmail: youssef-attia@live.com
+* Linkedin: https://www.linkedin.com/in/youssefattia98/
