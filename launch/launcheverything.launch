@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<launch>
+	<node pkg="armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService"/>
+	<node name="Ontologybuild" pkg="fsm_robot" type="Ontologybuild.py"  output="screen" /> 
+	<node name="batterynode" pkg="fsm_robot" type="batterynode.py"/>
+	<node name="finitestates" pkg="fsm_robot" type="finitestates.py" output="screen"/>
+</launch>
