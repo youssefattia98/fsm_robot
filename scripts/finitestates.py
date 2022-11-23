@@ -151,7 +151,7 @@ class waiting_for_map(smach.State):
         if mapflag == 0:
             return 'keepwaiting'
         else:
-            client.call('LOAD','FILE','',['/root/ros_ws/src/fsm_robot/my_map.owl', 'http://bnc/exp-rob-lab/2022-23', 'true', 'PELLET', 'false'])
+            client.call('LOAD','FILE','',['/root/ros_ws/src/fsm_robot/Ontologies/my_map.owl', 'http://bnc/exp-rob-lab/2022-23', 'true', 'PELLET', 'false'])
             print("MAP IS LOADED...")
             return 'maploaded'
 

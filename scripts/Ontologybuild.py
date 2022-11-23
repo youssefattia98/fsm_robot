@@ -26,7 +26,7 @@ def build_Ontology():
    rospy.init_node('mapsituation_node', anonymous=True)
    pub.publish(0)
 
-   client.call('LOAD','FILE','',['/root/ros_ws/src/fsm_robot/topological_map.owl', 'http://bnc/exp-rob-lab/2022-23', 'true', 'PELLET', 'false'])
+   client.call('LOAD','FILE','',['/root/ros_ws/src/fsm_robot/Ontologies/topological_map.owl', 'http://bnc/exp-rob-lab/2022-23', 'true', 'PELLET', 'false'])
    client.call('ADD','OBJECTPROP','IND',['hasDoor', 'E', 'D6'])
    client.call('ADD','OBJECTPROP','IND',['hasDoor', 'E', 'D7'])
    client.call('ADD','OBJECTPROP','IND',['hasDoor', 'R1', 'D1'])
@@ -126,7 +126,7 @@ def build_Ontology():
    client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
 
    print("Everything is fine, map built, saved and publishing to the map topic...")
-   client.call('SAVE','','',['/root/ros_ws/src/fsm_robot/my_map.owl'])
+   client.call('SAVE','','',['/root/ros_ws/src/Ontologies/fsm_robot/my_map.owl'])
    pub.publish(1)
    
 if __name__ == '__main__':
