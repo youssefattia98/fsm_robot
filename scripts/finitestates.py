@@ -147,12 +147,12 @@ class waiting_for_map(smach.State):
 
     def execute(self, userdata):
         client = ArmorClient("example", "ontoRef")
-        print('Executing state: waiting_for_map')
         rospy.sleep(sleeptime)
         if mapflag == 0:
             return 'keepwaiting'
         else:
             client.call('LOAD','FILE','',['/root/ros_ws/src/fsm_robot/my_map.owl', 'http://bnc/exp-rob-lab/2022-23', 'true', 'PELLET', 'false'])
+            print("MAP IS LOADED...")
             return 'maploaded'
 
 class move_in_corridor(smach.State):
@@ -163,20 +163,21 @@ class move_in_corridor(smach.State):
 
     def execute(self, userdata):
         client = ArmorClient("example", "ontoRef")
-        #checkurgent()
         urgentupdate()
-        print('Executing state: move_in_corridor')
         rospy.sleep(sleeptime)
         if batflag == 0:
+            print("BATTERY IS LOW...")
             return 'battlow'
         if urgentflag == 0 and batflag ==1:
-            print('I am taking u to urgent room')
+            print("THERE IS AN URGENT ROOM...")
             return 'urgentvisit'
         else:
             if random.randint(1, 2)==1:
                 moveto('C1')
+                rospy.sleep(stayinroomtime)
             else:
                 moveto('C2')
+                rospy.sleep(stayinroomtime)
             return 'keepmoving'
 
 class charing(smach.State):
@@ -189,6 +190,7 @@ class charing(smach.State):
         print('Executing state: charing')
         rospy.sleep(sleeptime)
         if batflag == 1:
+            print("BATTERY IS CHARGED...")
             return 'battfull'
         else:
             moveto('E')
@@ -202,9 +204,7 @@ class visitroom(smach.State):
 
     def execute(self, userdata):
         client = ArmorClient("example", "ontoRef")
-        #checkurgent()
         urgentupdate()
-        print('Executing state: visitroom')
         rospy.sleep(sleeptime)
         if urgentflag == 1:
             return 'noturgentvisit'
@@ -212,8 +212,6 @@ class visitroom(smach.State):
             return 'battlow'
         else:
             The_urgnet_room=urgentupdate()
-            print("The urgent room nearby is:")
-            print(The_urgnet_room)
             moveto(The_urgnet_room)
             rospy.sleep(stayinroomtime)
             return 'keepvisiting'

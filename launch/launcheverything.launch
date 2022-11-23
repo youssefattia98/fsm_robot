@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
 <launch>
-	<node pkg="armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService" launch-prefix = "xterm -e" output="screen"/>
-	<node name="Ontologybuild" pkg="fsm_robot" type="Ontologybuild.py"  output="screen" /> 
+	<node pkg="armor" type="execute" name="armor_service" args="it.emarolab.armor.ARMORMainService" launch-prefix = "xterm -e"/>
+	<node name="Ontologybuild" pkg="fsm_robot" type="Ontologybuild.py"  launch-prefix = "xterm -e"/> 
 	<node name="batterynode" pkg="fsm_robot" type="batterynode.py"/>
 	<node name="finitestates" pkg="fsm_robot" type="finitestates.py" output="screen"/>
 </launch>
