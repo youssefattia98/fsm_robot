@@ -1,8 +1,19 @@
 #!/usr/bin/env python
-# license removed for brevity
+"""
+.. module:: batterynode
+    :platform: Unix
+    :synopsis: Python module for publishing the battery state to the topic (batterylevel)
+
+.. moduleauthor:: Youssef Attia youssef-attia@live.com
+"""
+
+
 import rospy
 from std_msgs.msg import Bool
 
+"""
+Global Variables used to set the charged time and charging time of the battery which is 7:1
+"""
 charegedtime = 7
 notcharegedtime = 1
 
