@@ -334,7 +334,7 @@
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R1">
         <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D1"/>
-        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669242284</visitedAt>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669304224</visitedAt>
     </owl:NamedIndividual>
     
 
@@ -344,7 +344,7 @@
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R2">
         <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D2"/>
-        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669242285</visitedAt>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669304224</visitedAt>
     </owl:NamedIndividual>
     
 
@@ -354,7 +354,7 @@
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R3">
         <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D3"/>
-        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669242286</visitedAt>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669304225</visitedAt>
     </owl:NamedIndividual>
     
 
@@ -364,7 +364,7 @@
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#R4">
         <hasDoor rdf:resource="http://bnc/exp-rob-lab/2022-23#D4"/>
-        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669242288</visitedAt>
+        <visitedAt rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669304226</visitedAt>
     </owl:NamedIndividual>
     
 
@@ -374,7 +374,7 @@
 
     <owl:NamedIndividual rdf:about="http://bnc/exp-rob-lab/2022-23#Robot1">
         <isIn rdf:resource="http://bnc/exp-rob-lab/2022-23#E"/>
-        <now rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669242288</now>
+        <now rdf:datatype="http://www.w3.org/2001/XMLSchema#long">1669304226</now>
         <urgencyThreshold rdf:datatype="http://www.w3.org/2001/XMLSchema#long">7</urgencyThreshold>
     </owl:NamedIndividual>
     

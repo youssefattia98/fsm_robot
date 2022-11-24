@@ -11,12 +11,15 @@ However, if a battery is low it goes to the state (charing), which keeps moves t
 Also, if there is an urgent room while the battery is charged the robot visits it and stays there for some time (visitroom state).
 """
 
+
+import roslib
 import random
 import math
 import time
 import rospy
 import rospkg
 import smach
+import smach_ros
 from std_msgs.msg import Bool
 from armor_api.armor_client import ArmorClient
 
@@ -328,7 +331,13 @@ def main():
     rospy.Subscriber("batterylevel", Bool, callbackbattery)
     rospy.Subscriber("mapsituation", Bool, callbackmap)
     # Execute SMACH plan
+    # Create and start the introspection server
+    sis = smach_ros.IntrospectionServer('server_name', robot, '/SM_ROOT')
+    sis.start()
     outcome = robot.execute()
+    # Wait for ctrl-c to stop the application
+    rospy.spin()
+    sis.stop()
 
 
 if __name__ == '__main__':
