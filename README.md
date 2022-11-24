@@ -47,8 +47,8 @@ $ roslaunch fsm_robot launcheverything.launch
 
 
 # 4) Package In Action
-* Video
 
+https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-a721-ae874e73adc1.mp4
 
 
 # 5) Working Hypothesis & Environment
