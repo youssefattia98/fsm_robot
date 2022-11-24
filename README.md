@@ -20,7 +20,7 @@ The following digram shows the map Onltogy that the robot builds:
 The following finite state machine shows the behavior the robot follows when the architecture was initially desigend:  
 ![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/fsm_digram.PNG)  
 
-## III) nodes digram  
+## III) Nodes digram:    
 The following digram shows the software architecture of the package as the main node here is the *finitesates node* and it requries three inputs to decide what the robot should do. 
 * Map situation and this is retrived from the topic *mapsituation* and the *Ontlogybuild* node publishes on this topic.
 * Battery situation and this is retrived from the topic *batterylevel* and the batterynode* node publishes on this topic.
