@@ -47,7 +47,12 @@ $ roslaunch fsm_robot launcheverything.launch
 
 
 # 4) Package In Action  
-The following video shows the package running in action, also in parallel the smach viewer that shows each state the robot is in. Please note that the ontology building have already been made and this is only the fnite state machine working with armor.
+The following video shows the package running in action, also in parallel the smach viewer that shows each state the robot is in. Please note that the ontology building have already been made and this is only the fnite state machine working with armor.  
+The smach viewer can be run with the following commad:
+
+```bash
+$ rosrun smach_viewer smach_viewer.py
+```
 
 https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-a721-ae874e73adc1.mp4    
 
