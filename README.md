@@ -51,7 +51,7 @@ The following video shows the package running in action, also in parallel the sm
 
 https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-a721-ae874e73adc1.mp4    
 
-The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be heated at least a glimpse of it.
+The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be listened to least a glimpse of it.
 
 
 # 5) Working Hypothesis & Environment
