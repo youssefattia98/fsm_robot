@@ -13,8 +13,10 @@ Please note, this package was devloped on a [docker image](https://hub.docker.co
 * Robot Behavior:  
 First it waits for the ontology (map) to be built in Room E. Then starting from the (move_in_corridor) state it checks if the battery is not low or there is no urgent room, it moves randomly in the two corridors and wait for some time. However, if a battery is low it goes to the state (charing), which keeps the robot in room E and stayes there untill the battery is charged. Also, if there is an urgent room while the battery is charged the robot visits it and stays there for some time (visitroom state).  
 The following digram shows the map Onltogy that the robot builds:  
-![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/MAP.PNG) 
-* Finite State Machine digram:
+![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/MAP.PNG)  
+
+
+* Finite State Machine digram:  
 The following finite state machine shows the behavior the robot follows when the architecture was initially desigend:  
 ![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/fsm_digram.PNG) 
 * nodes digram
