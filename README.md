@@ -1,5 +1,8 @@
 # Description Logic & Finite State Machine Robot
 
+
+If ur going to steal this code there is a lot of hidden faults in it, so if u need help contact me and i would expalin to u ;)
+
 # 1) Introduction
 This is a ROS package that simulates the architecture of a robot building an ontology of the map environment and uses finite state machine to explore the environment in an organized manner.  
 The package depends on [Armor package](https://github.com/EmaroLab/armor). Furthermore, for the finite state machine the [Smach package](http://wiki.ros.org/smach) is used to set it up. Moreover, a detalied docmentation of the scripts can be found [here built with Sphinx](https://youssefattia98.github.io/fsm_robot/).
