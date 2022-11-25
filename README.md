@@ -1,7 +1,7 @@
 # Description Logic & Finite State Machine Robot
 
 
-If ur going to steal this code there is a lot of hidden faults in it, so if u need help contact me and i would expalin to u ;)
+If ur going to steal this code there is a lot of hidden faults in it, so if u need help contact me and i would expalin to u ;) i made the repo public to help whoever needed it
 
 # 1) Introduction
 This is a ROS package that simulates the architecture of a robot building an ontology of the map environment and uses finite state machine to explore the environment in an organized manner.  
