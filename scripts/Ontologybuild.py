@@ -7,7 +7,8 @@
 .. moduleauthor:: Youssef Attia youssef-attia@live.com
 This node imports the main ontology topological_map.owl file which is provided form this `repo: <https://github.com/buoncubi/topological_map>`_.
 Adds the locations and doors and disjoints them, later it makes the robot take a cruise in each room adding the *visitedAt* property for each of them
-and also updating the robot *now property. This makes it easier for the node *finitestates* to replace these properties.
+and also updating the robot *now property. This makes it easier for the node *finitestates* to replace these properties.  
+
 Furthermore, the newly built ontology is saved on a separate file to be used from the *finitestates* node and a message is sent to the topic *mapsituation*
 indicating that the map is built.
 """
@@ -36,9 +37,11 @@ maxwait = 1.75
 
 def findtime(list):
    """
-   Function for finding the time with Unix format from the return of a qureied proprity from armor.
+   Function for finding the time with Unix format from the return of a qureied proprity from armor.  
+
    Args:
-      Time(list): The time in the armor resonse format *ex. ['"1669241751"^^xsd:long']*
+      Time(list): The time in the armor resonse format *ex. ['"1669241751"^^xsd:long']*  
+
    Returns:
       Time(string): The time extarcted and changed to a string *ex. "1665579740"*
    """
@@ -52,9 +55,10 @@ def findtime(list):
 
 def build_Ontology():
    """
-   Function for loading the Ontology, building it, visiting rooms, updating timestamps and saving the new Ontology
+   Function for loading the Ontology, building it, visiting rooms, updating timestamps and saving the new Ontology  
+
    Args:
-      void
+      void  
    Returns:
       void
    """

@@ -12,12 +12,22 @@ import rospy
 from std_msgs.msg import Bool
 
 """
-Global Variables used to set the charged time and charging time of the battery which is 7:1
+Global Variables used to set the charged time and charging time of the battery which is 7:1  
+
 """
 charegedtime = 7
 notcharegedtime = 1
 
 def talker():
+    """
+    Function to initiate a topic *batterylevel* to publish the battery situation.  
+
+    Args:
+        void  
+        
+    Returns:
+        void
+    """
     pub = rospy.Publisher('batterylevel', Bool, queue_size=10)
     rospy.init_node('batterylevel_node', anonymous=True)
     while not rospy.is_shutdown():
