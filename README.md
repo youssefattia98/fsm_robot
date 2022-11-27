@@ -60,6 +60,7 @@ The following video shows the package running in action, also in parallel the sm
 The smach viewer can be run with the following commad:
 
 ```bash
+& sudo apt-get install ros-noetic-smach-viewer
 $ rosrun smach_viewer smach_viewer.py
 ```
 
@@ -67,6 +68,13 @@ https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-
 
 The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be listened to least a glimpse of it.  
 
+The following digram shows thr rqt grapgh of the package running and how the noedes communicate with each other. Moreover, the pakage behaviour is as same as the desigend software architecture design and mentioned in the above point *2)III)*. The following comands can be used to view the nodes rqt digram:
+
+
+```bash
+& sudo apt-get install ros-noetic-rqt
+$ rosrun rqt_graph rqt_graph
+```
 
 ![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/rqt_grapgh_nodes.jpg)  
 
