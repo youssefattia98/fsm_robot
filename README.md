@@ -143,7 +143,7 @@ $ rosrun rqt_graph rqt_graph
     ```
 * Creating a manual mode launch file:  
     Apllying such solution would give the user the capability to design his/her own map and pass it to the package, also gives the capability of testing diffrent situations to see how the robot behaves.
-* Checking urgency in a seprate node:  
+* creating a seprate node for urgency checking:  
     Creating such a node would be a better software architecture as the *finitestate* node will be only resposible for the robot behavior and the urgency will be passed by a message through a topic that the **finitestate* node subscribes to.
 
 * Upgrade the *Ontologybuild* behaviour:  
