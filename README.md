@@ -7,7 +7,7 @@
 This is a ROS package that simulates the architecture of a robot building an ontology of the map environment and uses finite state machine to explore the environment in an organized manner.  
 The package depends on [Armor package](https://github.com/EmaroLab/armor). Furthermore, for the finite state machine the [Smach package](http://wiki.ros.org/smach) is used to set it up. Moreover, a detalied docmentation of the scripts can be found [here built with Sphinx](https://youssefattia98.github.io/fsm_robot/).
 
-Please note, this package was devloped on a [docker image](https://hub.docker.com/r/carms84/exproblab). with all the dependieces need pre-installed on the image.  
+Please note, this package was devloped on a [docker image](https://hub.docker.com/r/carms84/exproblab). with all the dependieces needed pre-installed on the image.  
 
 
 
