@@ -65,7 +65,10 @@ $ rosrun smach_viewer smach_viewer.py
 
 https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-a721-ae874e73adc1.mp4    
 
-The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be listened to least a glimpse of it.
+The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be listened to least a glimpse of it.  
+
+
+![immagine](https://github.com/youssefattia98/fsm_robot/blob/main/docs/Digrams%20%26%20videos/rqt_grapgh_nodes.jpg)  
 
 
 # 5) Working Hypothesis & Environment
