@@ -56,11 +56,12 @@ $ roslaunch fsm_robot launcheverything.launch
 
 
 # 4) Package In Action  
+## Video with smach viewer:
 The following video shows the package running in action, also in parallel the smach viewer that shows each state the robot is in. Please note that the ontology building have already been made and this is only the fnite state machine working with armor. If you compare this running digram with the one presented previously in the Software Architecture section you would see that the finitestates node performs exactly the designed architecture.
 The smach viewer can be run with the following commad:
 
 ```bash
-& sudo apt-get install ros-noetic-smach-viewer
+$ sudo apt-get install ros-noetic-smach-viewer
 $ rosrun smach_viewer smach_viewer.py
 ```
 
@@ -68,11 +69,14 @@ https://user-images.githubusercontent.com/69837845/203873910-f42bc6ac-4ba5-43d1-
 
 The music used in this video I have no copy right on it. However, I think such a masterpiece of music should be listened to least a glimpse of it.  
 
+
+## Rqt digram:  
+
 The following digram shows thr rqt grapgh of the package running and how the noedes communicate with each other. Moreover, the pakage behaviour is as same as the desigend software architecture design and mentioned in the above point *2)III)*. The following comands can be used to view the nodes rqt digram:
 
 
 ```bash
-& sudo apt-get install ros-noetic-rqt
+$ sudo apt-get install ros-noetic-rqt
 $ rosrun rqt_graph rqt_graph
 ```
 
