@@ -87,80 +87,20 @@ def build_Ontology():
    client.call('DISJOINT','IND','',['R1','R2','R3','R4','E','C1','C2','D1','D2','D3','D4','D5','D6','D7'])
    client.call('REASON','','',[''])
 
-   print("I have built the Map, will take a tour in the rooms...")
-   #Visit R1
-   #Update robot isin property
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'R1','E'])
-   #Update robot now property
-   client.call('REASON','','',[''])
-   req=client.call('QUERY','DATAPROP','IND',['now', 'Robot1'])
-   oldtimerobot=findtime(req.queried_objects)
-   newtime=str(math.floor(time.time()))
-   client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
-   #Update the location visited at property
-   client.call('REASON','','',[''])
-   client.call('ADD','DATAPROP','IND',['visitedAt','R1', 'Long', newtime])
-   client.call('REASON','','',[''])
-
+   #Adding the visitedAt property for each room 
+   client.manipulation.add_dataprop_to_ind("visitedAt", "R1", "Long", str(math.floor(time.time())))
    rospy.sleep(random.uniform(minwait, maxwait))
-   #Visit R2
-   #Update robot isin property
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'C1','R1'])
-   client.call('REASON','','',[''])
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'R2','C1'])
-   #Update robot now property
-   client.call('REASON','','',[''])
-   req=client.call('QUERY','DATAPROP','IND',['now', 'Robot1'])
-   oldtimerobot=findtime(req.queried_objects)
-   newtime=str(math.floor(time.time()))
-   client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
-   #Update the location visited at property
-   client.call('REASON','','',[''])
-   client.call('ADD','DATAPROP','IND',['visitedAt','R2', 'Long', newtime])
-   client.call('REASON','','',[''])
-
+   client.manipulation.add_dataprop_to_ind("visitedAt", "R2", "Long", str(math.floor(time.time())))
    rospy.sleep(random.uniform(minwait, maxwait))
-   #Visit R3
-   #Update robot isin property
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'C1','R2'])
-   client.call('REASON','','',[''])
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'C2','C1'])
-   client.call('REASON','','',[''])
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'R3','C2'])
-   #Update robot now property
-   client.call('REASON','','',[''])
-   req=client.call('QUERY','DATAPROP','IND',['now', 'Robot1'])
-   oldtimerobot=findtime(req.queried_objects)
-   newtime=str(math.floor(time.time()))
-   client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
-   #Update the location visited at property
-   client.call('REASON','','',[''])
-   client.call('ADD','DATAPROP','IND',['visitedAt','R3', 'Long', newtime])
-   client.call('REASON','','',[''])
-
+   client.manipulation.add_dataprop_to_ind("visitedAt", "R3", "Long", str(math.floor(time.time())))
    rospy.sleep(random.uniform(minwait, maxwait))
-   #Visit R4
-   #Update robot isin property
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'C2','R3'])
-   client.call('REASON','','',[''])
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'R4','C2'])
-   #Update robot now property
-   client.call('REASON','','',[''])
-   req=client.call('QUERY','DATAPROP','IND',['now', 'Robot1'])
-   oldtimerobot=findtime(req.queried_objects)
-   newtime=str(math.floor(time.time()))
-   client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
-   #Update the location visited at property
-   client.call('REASON','','',[''])
-   client.call('ADD','DATAPROP','IND',['visitedAt','R4', 'Long', newtime])
-   client.call('REASON','','',[''])
-
+   client.manipulation.add_dataprop_to_ind("visitedAt", "R4", "Long", str(math.floor(time.time())))
    rospy.sleep(random.uniform(minwait, maxwait))
+
    #Visit E
    #Update robot isin property
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'C2','R4'])
    client.call('REASON','','',[''])
-   client.call('REPLACE','OBJECTPROP','IND',['isIn', 'Robot1', 'E','C2'])
+   client.call('ADD','OBJECTPROP','IND',['isIn', 'Robot1', 'E'])
    #Update robot now property
    client.call('REASON','','',[''])
    req=client.call('QUERY','DATAPROP','IND',['now', 'Robot1'])
@@ -168,9 +108,12 @@ def build_Ontology():
    newtime=str(math.floor(time.time()))
    client.call('REPLACE','DATAPROP','IND',['now', 'Robot1', 'Long', newtime, oldtimerobot])
 
+   
    print("Everything is fine, map built, saved and publishing to the map topic...")
    client.call('SAVE','','',[newontology])
    pub.publish(1)
+   print("I will Terminate this process in 3 seconds...")
+   rospy.sleep(3)
    
 if __name__ == '__main__':
    try:

@@ -236,11 +236,12 @@ class waiting_for_map(smach.State):
         *keepwaiting* if map is not loaded and *maploaded* if the map is loaded.  
         
     """
-    global batflag
+    
     def __init__(self):
         smach.State.__init__(self, outcomes=['keepwaiting','maploaded'])
 
     def execute(self, userdata):
+        global mapflag
         client = ArmorClient("example", "ontoRef")
         rospy.sleep(sleeptime)
         if mapflag == 0:
@@ -257,12 +258,13 @@ class move_in_corridor(smach.State):
     Returns:
         *keepmoving* if the battery is not low and there is no urgent room, *battlow* if the batery is low and *urgentvisit* if there is an urgent room
     """
-    global batflag
-    global urgentflag
+    
     def __init__(self):
         smach.State.__init__(self, outcomes=['keepmoving','battlow','urgentvisit'])
 
     def execute(self, userdata):
+        global batflag
+        global urgentflag
         client = ArmorClient("example", "ontoRef")
         urgentupdate()
         rospy.sleep(sleeptime)
@@ -288,13 +290,13 @@ class charging(smach.State):
     Returns:
         *keepcharging* if the battery is still low, *battfull* if the batery is fully charged by other means the *batflag* is True.
     """
-    global batflag
+    
     def __init__(self):
         smach.State.__init__(self, outcomes=['keepcharging','battfull'])
 
     def execute(self, userdata):
+        global batflag
         client = ArmorClient("example", "ontoRef")
-        print('Executing state: charging')
         rospy.sleep(sleeptime)
         if batflag == 1:
             print("BATTERY IS CHARGED...")
@@ -313,12 +315,13 @@ class visitroom(smach.State):
         *battlow* if the battery is low.  
 
     """
-    global batflag
-    global urgentflag
+    
     def __init__(self):
         smach.State.__init__(self, outcomes=['keepvisiting','noturgentvisit', 'battlow'])
 
     def execute(self, userdata):
+        global batflag
+        global urgentflag
         client = ArmorClient("example", "ontoRef")
         urgentupdate()
         rospy.sleep(sleeptime)
